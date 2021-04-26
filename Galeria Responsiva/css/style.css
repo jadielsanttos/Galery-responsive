@@ -1,0 +1,192 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	height: 100%;
+	margin-bottom: 100px;
+}
+
+ul li{
+	list-style: none;
+	font-family: tahoma;
+}
+
+nav ul li:hover{
+	background-color: #777;
+	border-radius: 5px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+h1{
+	text-align: center;
+	margin-top: 100px;
+	font-family: tahoma;
+	font-weight: normal;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+p{
+	font-family: tahoma;
+}
+
+h4{
+	margin-left: 400px;
+	font-family: tahoma;
+	font-weight: normal;
+}
+
+.header{
+	background-color: #111;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.menu{
+	display: flex;
+
+}
+
+.menu li{
+	margin-left: 8px;
+	padding: 10px;
+	font-size: 18px;
+}
+
+
+.menu li a{
+	display: block;
+
+}
+
+.emergency{
+	font-family: tahoma;
+	font-size: 35px;
+	margin-left: 50px;
+}
+
+
+/*flex box 1*/
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.flex > div{
+	flex: 1 1 200px;
+	margin: 0 10px;
+
+}
+
+/* CSS GRID 1*/
+
+.grid1{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 780px;
+	margin: 0 auto;
+	grid-gap: 20px;
+}
+
+
+.grid1 > div:nth-child(n + 4){
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+	align-items: center;
+}
+
+.grid1 > div.anuncio{
+	grid-column: 1;
+	grid-row: 2 / 5;
+	display: block;
+
+}
+
+@media (max-width: 600px){
+	.grid1{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.grid1 > div:nth-child(n + 4){
+		display: block;
+	}
+
+	.grid1 > div.anuncio{
+		grid-column: auto;
+		grid-row: auto;
+		order: -1;
+	}
+
+
+}
+
+/* GRID 2 */
+
+.grid2{
+	display: grid;
+	grid-template-columns: 1fr 200px;
+	grid-gap: 20px;
+	max-width: 800px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.sidebar > div{
+	margin-bottom: 10px;
+}
+
+@media (max-width: 600px){
+	.grid2{
+		grid-template-columns: 1fr;
+	}
+
+	.sidebar{
+		display: flex;
+		overflow: scroll;
+		overflow-y: hidden;
+	}
+
+	.sidebar > div{
+		flex: 1 0 200px;
+		margin: 0 10px;
+	}
+
+	h4{
+		margin-top: 50px;
+		margin-left: initial;
+		font-family: tahoma;
+		font-weight: normal;
+	}
+
+	.emergency{
+		font-family: tahoma;
+		font-size: 25px;
+		margin-left: 25px;
+	}
+
+	.menu li{
+		margin-left: 5px;
+		padding: 10px;
+		font-size: 12px;
+	}
+	
+
+}
+
+
